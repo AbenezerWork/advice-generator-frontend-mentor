@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+  margin: 0px;
+  font-size: 14px;
+  height: 100%;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+}
+
+#advice {
+  background-color: white;
+  max-width: 90%;
+  width: 560px;
+}
+
+/*# sourceMappingURL=style.css.map */
