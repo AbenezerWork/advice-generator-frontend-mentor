@@ -1,3 +1,9 @@
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+$greyish-blue: hsl(217, 19%, 38%);
+$dark-greyish-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
+$button-diameter: 60px;
 html{
     box-sizing: border-box;
     margin: 0px;
@@ -11,14 +17,71 @@ html{
 }
 
 body{
+  font-family: 'Manrope', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vh;
+  background-color: $dark-blue;
+  width: 100vw;
+  height: 100vh;
+}
+
+h2{
+  color: $neon-green;
+  font-size: 12px;
+}
+
+p{
+  color: white;
+  font-size: 28px;
 }
 
 #advice{
-background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction:column;
+  align-items: center;
+  padding: 0px 20px;
+  padding-top: 40px;
+  background-color: $dark-greyish-blue;
+  border-radius: 5px;
   max-width: 90%;
+  min-width: 350px;
   width: 560px;
+  height: 300px;
+  text-align: center;
 }
+img{
+  position: relative;
+  bottom: calc(-1 * $button-diameter / 2)
+}
+button{
+  position: relative;
+  bottom: calc(-1 * $button-diameter / 2);
+  height: $button-diameter;
+  width: $button-diameter;
+  background-color: $neon-green;
+  background-image: url('images/icon-dice.svg');  
+  background-repeat: no-repeat;
+  background-position: center;
+  color: $dark-blue;
+  border-radius: 50%;
+  border: none;
+}
+
+button:hover{
+  box-shadow: 0px 0px 20px 5px hsla(150, 100%, 66%,50%);
+}
+.rotate{
+  animation: rotation 1s linear infinite;
+
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
